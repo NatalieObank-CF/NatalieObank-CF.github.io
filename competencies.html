@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Business Analysis Competency Framework</title> <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <div class="header-title-container"><img src="images/CF_Logo.svg" alt="CreateFuture Logo" id="header-logo">     </div>
+        <h1>BA Brilliance Bureau
+        </h1>
+        <p style="color: #f20909; text-align: center;">Note: All progress is saved locally in your browser only.</p>
+        <nav id="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About BA</a>
+            <a href="competencies.html" class="nav-link">Competencies</a>
+            <a href="knowledgebase.html" class="nav-link">Knowledge Base</a>
+            <a href="support.html" class="nav-link">Support</a>
+            </nav>
+        <br>
+    </header>
+
+    <main>
+        <section id="competencies-section">
+            <h2>Business Analysis Competency Framework</h2>
+            <nav>
+                <label for="level-select">Competency by Grade:</label>
+                <select id="level-select">
+                    </select>
+            </nav>
+            <p>Below are the competencies related to the Grade you have selected.</p>
+            <div id="competencies-container">
+                </div>
+                <button id="export-csv-button" style="margin-left: 20px;">Export Competencies to CSV</button>
+        </section>
+        
+
+        <section id="guidance-section" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close-button" title="Close">&times;</span>
+                <h3 id="guidance-title"></h3>
+                <div id="guidance-content"></div>
+            </div>
+        </section>
+
+        <section id="champions-section">
+            <h2>Competency Champions</h2>
+            <div id="champions-container">
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Your BA Team</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

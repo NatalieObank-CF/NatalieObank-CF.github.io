@@ -1,0 +1,14 @@
+{
+    "champions": [
+      {
+        "name": "Dawn Keegan",
+        "competencyRole": "Lead Business Analyst",
+        "slackLink": "slack://user?team=YOUR_TEAM_ID&id=USERID_ALICE"
+      },
+      {
+        "name": "Natalie Obank",
+        "competencyRole": "Senior Business Analyst",
+        "slackLink": "slack://user?team=YOUR_TEAM_ID&id=USERID_BOB"
+      }
+    ]
+  }

@@ -1,0 +1,411 @@
+body {
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4, /* If you use h4 as headers */
+h5, /* If you use h5 as headers */
+h6, /* If you use h6 as headers */
+.level-title, /* The class for your "Associate BA", "Mid-Level BA" titles */
+.competency-table th, /* Table headers (Name, Description, Status etc.) */
+#guidance-title, /* The main title in your "How do I?" modal */
+.modal-subheader /* The "What does this mean?" and "Useful Resources" subheaders in the modal */ {
+  font-family: 'Syne', sans-serif; /* Syne for headers */
+  /* You might want to specify a default weight for headers if you imported multiple weights for Syne.
+     For example, if you want your headers to be generally bold: */
+  /* font-weight: 700; */ /* 700 is a common value for bold */
+}
+
+header {
+    background-color: #24004C;
+    color: #c4ff35;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav label {
+    margin-right: 10px;
+}
+
+header nav select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #24004C;
+    border-bottom: 2px solid #24004C;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #333;
+}
+
+/* Competency Card Styling */
+/*.competency-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+/*.competency-card h4 {
+    margin-top: 0;
+    color: #004080;
+}
+
+/*.competency-card p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/*.competency-card .guidance-button {
+    background-color: #24004C;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+/*.competency-card .guidance-button:hover {
+    background-color: #c4ff35;
+    color: #24004C;
+}
+
+.status-tracker label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.status-tracker select,
+.status-tracker textarea,
+.status-tracker input[type="file"], /* Style placeholder for file input */
+.status-tracker input[type="text"] /* For link input */
+
+/* In style.css */
+
+.level-title { /* Existing style, ensure it has good margin before table */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.competency-table {
+    width: 100%;
+    border-collapse: collapse; /* Important for clean borders */
+    margin-bottom: 30px; /* Space between tables of different levels */
+    font-size: 0.9rem; /* Adjust overall font size for table if needed */
+}
+
+.competency-table th,
+.competency-table td {
+    border: 1px solid #ddd; /* Light grey border for cells */
+    padding: 10px;          /* Padding inside cells */
+    text-align: left;     /* Align text to the left */
+    vertical-align: top;  /* Align content to the top of the cell */
+}
+
+.competency-table th {
+    background-color: #f2f2f2; /* Light grey background for headers */
+    font-weight: bold;
+    white-space: nowrap; /* Prevent header text from wrapping */
+}
+
+/* Specific column styling */
+.competency-table .competency-name-cell {
+    width: 20%;
+    font-weight: bold;
+}
+.competency-table .competency-desc-cell {
+    width: 35%;
+}
+.competency-table .competency-status-cell {
+    width: 15%;
+    min-width: 130px; /* Ensure dropdown fits */
+}
+.competency-table .competency-evidence-cell {
+    width: 25%;
+}
+.competency-table .competency-action-cell {
+    width: 5%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Styling for form elements within table cells */
+.form-element {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width: 100% to include padding/border */
+}
+.evidence-textarea {
+    font-family: 'Montserrat', sans-serif;
+    min-height:500px; /* Adjust as needed */
+    resize: vertical;
+}
+.competency-table .guidance-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+    background-color: #24004C;
+    color: #f2f2f2;
+}
+.competency-table .guidance-button:hover {
+    background-color: #c4ff35;
+    color: #24004C;
+    border: 0px;
+}
+.competency-evidence-cell br {
+    margin-bottom: 5px; /* Space between textarea and input link */
+}
+
+{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px); 
+    box-sizing: border-box;
+}
+
+.status-tracker textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Champion Card Styling */
+.champion-card {
+    background-color: #f0f8ff; /* Light alice blue */
+    border: 1px solid #cce5ff;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.champion-card h4 {
+    margin-top: 0;
+    color: #004085; 
+}
+
+.champion-card p {
+    margin: 5px 0;
+}
+
+.champion-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+.champion-card a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+#competencies-section #export-csv-button { 
+    display: block; 
+    margin: 0 auto 20px auto;
+    padding: 10px 15px;
+    background-color: #24004C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#competencies-section #export-csv-button:hover {
+    background-color: #c4ff35;
+    color: #24004C
+}
+
+
+.montserrat-<createfuture-montserrat> {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+
+.syne-<createfuture-syne> {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+#header-logo {
+    height: 25px;
+    weight: auto; 
+    margin-right: 8000px;
+}
+
+/* General Header styling (you might have some of this already) */
+header {
+    background-color: #24004C;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.header-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#header-logo {
+    height: 40px; /* Or your preferred size */
+    width: auto;
+    margin-right: 15px;
+}
+
+.header-title-container h1 {
+    margin: 0;
+    font-family: 'Syne', sans-serif; /* Consistent header font */
+    font-size: 2em; /* Adjust as needed */
+}
+
+header p { /* The note about local storage */
+    font-size: 0.85em;
+    margin-bottom: 15px;
+}
+
+/* Main Navigation Styles */
+#main-nav {
+    padding: 10px 0;
+    border-top: 1px solid #c4ff35; /* Optional line above nav */
+    border-bottom: 1px solid #c4ff35; /* Optional line below nav */
+    margin-top: 10px;
+}
+
+#main-nav a.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: #f2f2f2;
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 8px 5px;
+    font-size: 0.95em;
+    border-radius: 3px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#main-nav a.nav-link:hover {
+    background-color: #c4ff35;
+    color: #010019;
+}
+
+#main-nav a.nav-link.active { /* Style for the current page's link */
+    background-color: #007bff; /* Example active color */
+    color: white;
+    font-weight: 600; /* Make active link bolder */
+}
+
+#main-nav .nav-separator {
+    color: #9d1313;
+    margin: 0 5px 0 30px;
+}
+
+#main-nav label[for="level-select"] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+#main-nav #level-select {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+}
