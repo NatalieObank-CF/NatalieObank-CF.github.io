@@ -10,17 +10,15 @@ body {
 h1,
 h2,
 h3,
-h4, /* If you use h4 as headers */
-h5, /* If you use h5 as headers */
-h6, /* If you use h6 as headers */
-.level-title, /* The class for your "Associate BA", "Mid-Level BA" titles */
+h4, /* If we want to use h4 as headers */
+h5, /* If we want to use h5 as headers */
+h6, /* If we want use h6 as headers */
+.level-title, /* The class for the "Graduate Business Analyst", "Business Analyst" etc. titles */
 .competency-table th, /* Table headers (Name, Description, Status etc.) */
-#guidance-title, /* The main title in your "How do I?" modal */
+#guidance-title, /* The main title in the "How do I?" modal */
 .modal-subheader /* The "What does this mean?" and "Useful Resources" subheaders in the modal */ {
-  font-family: 'Syne', sans-serif; /* Syne for headers */
-  /* You might want to specify a default weight for headers if you imported multiple weights for Syne.
-     For example, if you want your headers to be generally bold: */
-  /* font-weight: 700; */ /* 700 is a common value for bold */
+  font-family: 'Syne', sans-serif; weight: 700; 
+    /* Syne for headers */
 }
 
 header {
@@ -329,7 +327,7 @@ footer {
     margin-right: 8000px;
 }
 
-/* General Header styling (you might have some of this already) */
+/* General Header styling */
 header {
     background-color: #24004C;
     color: white;
@@ -345,7 +343,7 @@ header {
 }
 
 #header-logo {
-    height: 40px; /* Or your preferred size */
+    height: 40px;
     width: auto;
     margin-right: 15px;
 }
