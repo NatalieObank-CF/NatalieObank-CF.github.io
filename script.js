@@ -25,182 +25,204 @@ document.addEventListener('DOMContentLoaded', () => {
             loadUserProgress(); // Load progress from localStorage
             populateLevelSelector();
             displayChampions(championsData.champions);
-            displayCompetencies(); // Initial display
-        } catch (error) {
-            console.error("Error loading data:", error);
-            competenciesContainer.innerHTML = `<p style="color:red;">Error loading competency data. Please check console or data files.</p>`;
-            championsContainer.innerHTML = `<p style="color:red;">Error loading champion data.</p>`;
-        }
-    }
-
-    // --- 2. USER PROGRESS (localStorage) ---
-    function loadUserProgress() {
-        const savedProgress = localStorage.getItem('baUserSelfTrackProgress'); // Use a unique key
-        if (savedProgress) {
-            userProgress = JSON.parse(savedProgress);
-        }
-    }
-
-    function saveUserProgress() {
-        localStorage.setItem('baUserSelfTrackProgress', JSON.stringify(userProgress));
-        // console.log("Progress saved:", userProgress); // For debugging
-    }
-
-    // --- 3. DISPLAY FUNCTIONS ---
-    function populateLevelSelector() {
-        if (!allCompetenciesData.levels) {
-            console.error("No levels found in competencies data.");
-            return;
-        }
-        // Create "View All" option
-        const allOption = document.createElement('option');
-        allOption.value = "All";
-        allOption.textContent = "View All Grades";
-        levelSelect.appendChild(allOption);
-        
-        allCompetenciesData.levels.forEach(level => {
-            const option = document.createElement('option');
-            option.value = level.name; // Use level name as value
-            option.textContent = level.name;
-            levelSelect.appendChild(option);
-        });
-
-        levelSelect.value = "All"; // Default selection
-        levelSelect.addEventListener('change', displayCompetencies);
-    }
-
-    // In script.js
+            // In script.js, replace the content of your displayCompetencies function
 
 function displayCompetencies() {
-    competenciesContainer.innerHTML = ''; // Clear previous content
-    const selectedLevelName = levelSelect.value;
+    // Get the two main display areas
+    const coreCompetenciesArea = document.getElementById('core-competencies-area');
+    const baCompetenciesArea = document.getElementById('ba-competencies-area');
+    const levelSelect = document.getElementById('level-select');
+    const mainCompetenciesSection = document.getElementById('competencies-section'); // Get the parent section
 
-    let levelsToDisplay = [];
-    // ... (your existing logic for determining levelsToDisplay based on selectedLevelName) ...
-    // This part should remain the same:
-    if (selectedLevelName === "All") {
-        levelsToDisplay = allCompetenciesData.levels;
-    } else {
-        const selectedIndex = allCompetenciesData.levels.findIndex(l => l.name === selectedLevelName);
-        if (selectedIndex !== -1) {
-            if (allCompetenciesData.levels[selectedIndex].name.toLowerCase().includes("mid")) {
-                levelsToDisplay = allCompetenciesData.levels.slice(selectedIndex);
-            } else {
-                levelsToDisplay = [allCompetenciesData.levels[selectedIndex]];
-            }
-        } else {
-            levelsToDisplay = []; // Should not happen if populated correctly
+    // Ensure all necessary elements and global data exist
+    if (!coreCompetenciesArea || !baCompetenciesArea || !levelSelect || !mainCompetenciesSection || !allCompetenciesData || !allCompetenciesData.levels) {
+        console.error("Required elements for displaying competencies not found or data not fully loaded.");
+        // Optionally display an error message in the main section
+        if(mainCompetenciesSection) {
+             mainCompetenciesSection.innerHTML = "<p class='error-message'>Error setting up competency display areas.</p>";
         }
-    }
-
-
-    if (levelsToDisplay.length === 0 && selectedLevelName !== "All") {
-        competenciesContainer.innerHTML = "<p>No competencies defined for the selected level filter.</p>";
         return;
     }
 
+    // Clear previous content from both areas
+    coreCompetenciesArea.innerHTML = '<h3>Core Competencies</h3>'; // Keep the heading
+    baCompetenciesArea.innerHTML = '<h3>Business Analysis Competencies</h3>'; // Keep the heading
 
+
+    const selectedLevelName = levelSelect.value;
+
+    const levelsToDisplay = [];
+    if (selectedLevelName === "All") {
+        levelsToDisplay.push(...allCompetenciesData.levels);
+    } else {
+        const selectedLevelData = allCompetenciesData.levels.find(l => l.name === selectedLevelName);
+        if (selectedLevelData) {
+            levelsToDisplay.push(selectedLevelData);
+            // If "Mid-Level BA" is selected, also find and add "Senior BA" if it exists
+            if (selectedLevelName === "Mid-Level BA") {
+                const seniorLevelData = allCompetenciesData.levels.find(l => l.name === "Senior BA");
+                if (seniorLevelData) {
+                    levelsToDisplay.push(seniorLevelData);
+                }
+            }
+        }
+    }
+
+    if (levelsToDisplay.length === 0) {
+        coreCompetenciesArea.innerHTML += "<p>No competency frameworks found for this level selection.</p>";
+        baCompetenciesArea.innerHTML += "<p></p>"; // Keep structure consistent
+        return;
+    }
+
+    // Iterate through each relevant level (e.g., Associate, or Mid + Senior)
     levelsToDisplay.forEach(level => {
-        // Display level name
-        const levelHeader = document.createElement('h3');
-        levelHeader.className = 'level-title';
-        levelHeader.textContent = level.name;
-        competenciesContainer.appendChild(levelHeader);
+        // Optionally add the level title again within each area if showing multiple levels at once
+        // const levelTitleCore = document.createElement('h4'); levelTitleCore.textContent = level.name; coreCompetenciesArea.appendChild(levelTitleCore);
+        // const levelTitleBA = document.createElement('h4'); levelTitleBA.textContent = level.name; baCompetenciesArea.appendChild(levelTitleBA);
 
-        if (!level.competencies || level.competencies.length === 0) {
-            const noCompMsg = document.createElement('p');
-            noCompMsg.textContent = "No competencies listed for this level.";
-            competenciesContainer.appendChild(noCompMsg);
-            return; // Skip creating a table if no competencies
+        if (!level.groups || level.groups.length === 0) {
+             console.warn(`No competency groups defined for level: ${level.name}`);
+             return; // Skip if level has no top-level groups
         }
 
-        // Create table for the current level
-        const table = document.createElement('table');
-        table.className = 'competency-table';
+        // Loop through each Top-Level Group (e.g., Core Competencies, Business Analysis Competencies)
+        level.groups.forEach(topGroup => {
+            let targetArea = null; // Determine which area to append to
 
-        // Create table header (thead)
-        const thead = table.createTHead();
-        const headerRow = thead.insertRow();
-        const headers = ["Name", "Description", "Status", "Evidence", "How do I?"];
-        headers.forEach(text => {
-            const th = document.createElement('th');
-            th.textContent = text;
-            headerRow.appendChild(th);
+            // --- Assign the target container based on Top-Level Group Name ---
+            if (topGroup.groupName === "Core Competencies") {
+                targetArea = coreCompetenciesArea;
+            } else if (topGroup.groupName === "Business Analysis Competencies") {
+                targetArea = baCompetenciesArea;
+            } else {
+                 console.warn(`Unknown top-level group name: "<span class="math-inline">\{topGroup\.groupName\}" in level "</span>{level.name}". Skipping.`);
+                return; // Skip if the top group name isn't recognized
+            }
+             // --- End Assign Target Area ---
+
+            // Optionally add the level title here, before the group's content, if you want it per level within the area
+            // This is useful if "All Levels" is selected.
+             const levelTitleForGroup = document.createElement('h4'); // Use h4 or h5
+             levelTitleForGroup.className = 'level-title-for-group';
+             levelTitleForGroup.textContent = `${level.name} Level`; // e.g., "Associate BA Level"
+             targetArea.appendChild(levelTitleForGroup);
+
+
+            if (!topGroup.subGroups || topGroup.subGroups.length === 0) {
+                const noSubGroupsMessage = document.createElement('p');
+                noSubGroupsMessage.textContent = `No sub-groups defined for "${topGroup.groupName}" under ${level.name}.`;
+                targetArea.appendChild(noSubGroupsMessage);
+            } else {
+                 // Loop through each Second-Level Group (e.g., Interactions, Integrity)
+                 topGroup.subGroups.forEach(subGroup => {
+                     const subGroupContainer = document.createElement('div');
+                     subGroupContainer.className = 'sub-competency-group-container'; // Use container for styling
+
+                     const subGroupHeader = document.createElement('h4'); // Heading for the Second-Level Group
+                     subGroupHeader.className = 'sub-competency-group-header';
+                     subGroupHeader.textContent = subGroup.subGroupName; // Displays "Interactions", "Integrity" etc.
+                     subGroupContainer.appendChild(subGroupHeader);
+
+
+                     if (!subGroup.competencies || subGroup.competencies.length === 0) {
+                         const noCompMessage = document.createElement('p');
+                         noCompMessage.textContent = `No competencies listed in the "${subGroup.subGroupName}" sub-group under ${level.name}.`;
+                         subGroupContainer.appendChild(noCompMessage);
+                     } else {
+                         // Create a table for the competencies within this Second-Level Group
+                         const table = document.createElement('table');
+                         table.className = 'competency-table';
+                          // Table headers (assuming consistent)
+                         table.innerHTML = `
+                             <thead>
+                                 <tr>
+                                     <th class="competency-name-header">Name</th>
+                                     <th class="competency-desc-header">Description</th>
+                                     <th class="competency-status-header">Status</th>
+                                     <th class="competency-evidence-header">Evidence/Notes</th>
+                                     <th class="competency-action-header">How do I?</th>
+                                 </tr>
+                             </thead>
+                             <tbody></tbody>
+                         `;
+                         const tbody = table.querySelector('tbody');
+
+                         // Loop through each individual competency
+                         subGroup.competencies.forEach(comp => {
+                             const row = tbody.insertRow();
+                             // Use the global userProgress object
+                             const progress = userProgress[comp.id] || {};
+
+                             // --- Competency Row Cells (same logic as before) ---
+                             // (Code for Name, Description, Status, Evidence, Action cells goes here)
+                             // You can copy this from your previous displayCompetencies function
+                              // Name Cell
+                              const nameCell = row.insertCell();
+                              nameCell.className = 'competency-name-cell';
+                              nameCell.textContent = comp.name;
+
+                              // Description Cell
+                              const descCell = row.insertCell();
+                              descCell.className = 'competency-desc-cell';
+                              let descriptionText = comp.description || comp.whatThisMeansContent || 'No description available.';
+                              descCell.innerHTML = descriptionText.replace(/\n/g, '<br>'); // Handle newlines
+
+                              // Status Cell
+                              const statusCell = row.insertCell();
+                              statusCell.className = 'competency-status-cell';
+                              const statusSelect = document.createElement('select');
+                              statusSelect.className = 'status-select';
+                              statusSelect.dataset.competencyId = comp.id;
+                              ['Not Started', 'Awareness', 'Working Towards', 'Proficient', 'Expert'].forEach(s => {
+                                  const option = document.createElement('option');
+                                  option.value = s;
+                                  option.textContent = s;
+                                  if (progress.status === s) option.selected = true;
+                                  statusSelect.appendChild(option);
+                              });
+                              statusSelect.value = progress.status || 'Not Started';
+                              statusSelect.style.backgroundColor = getStatusColor(progress.status || 'Not Started');
+                              statusCell.appendChild(statusSelect);
+
+                              // Evidence Cell
+                              const evidenceCell = row.insertCell();
+                              evidenceCell.className = 'competency-evidence-cell';
+                              const evidenceTextarea = document.createElement('textarea');
+                              evidenceTextarea.className = 'evidence-textarea form-element';
+                              evidenceTextarea.dataset.competencyId = comp.id;
+                              evidenceTextarea.placeholder = 'Your notes, achievements, examples...';
+                              evidenceTextarea.value = progress.evidenceText || '';
+
+                              const evidenceLinkInput = document.createElement('input');
+                              evidenceLinkInput.type = 'url';
+                              evidenceLinkInput.className = 'evidence-link-input form-element';
+                              evidenceLinkInput.dataset.competencyId = comp.id;
+                              evidenceLinkInput.placeholder = 'Link to evidence (e.g., document, SharePoint)';
+                              evidenceLinkInput.value = progress.evidenceLink || '';
+
+                              evidenceCell.appendChild(evidenceTextarea);
+                              evidenceCell.appendChild(document.createElement('br'));
+                              evidenceCell.appendChild(evidenceLinkInput);
+
+                              // Action Cell ("How do I?")
+                              const actionCell = row.insertCell();
+                              actionCell.className = 'competency-action-cell';
+                              if ((comp.howTo && comp.howTo.length > 0) || comp.whatThisMeansContent) {
+                                  const guidanceButton = document.createElement('button');
+                                  guidanceButton.textContent = 'How do I?';
+                                  guidanceButton.className = 'guidance-button';
+                                  guidanceButton.dataset.competencyId = comp.id;
+                                  actionCell.appendChild(guidanceButton);
+                              }
+
+                              // --- End of Competency Row Cells ---
+                         });
+                         subGroupContainer.appendChild(table); // Append the table to the subgroup container
+                     }
+                     targetArea.appendChild(subGroupContainer); // Append the subgroup container to the correct area (Core or BA)
+                 });
+             }
         });
-
-        // Create table body (tbody)
-        const tbody = table.createTBody();
-
-        level.competencies.forEach(comp => {
-            const row = tbody.insertRow();
-            row.dataset.competencyId = comp.id; // Keep for potential future use
-
-            // 1. Name Cell
-            const nameCell = row.insertCell();
-            nameCell.textContent = comp.name;
-            nameCell.className = 'competency-name-cell'; // For specific styling
-
-            // 2. Description Cell
-            const descCell = row.insertCell();
-            descCell.className = 'competency-desc-cell';
-            let descriptionText = comp.description || 'No description available.';
-            descCell.innerHTML = descriptionText.replace(/\n/g, '<br>'); // Convert \n to <br>
-
-            // 3. Status Cell
-            const statusCell = row.insertCell();
-            statusCell.className = 'competency-status-cell';
-            const compProgress = userProgress[comp.id] || {};
-            const currentStatus = compProgress.status || 'Not Started';
-
-            const statusSelect = document.createElement('select');
-            statusSelect.id = `status-${comp.id}`;
-            statusSelect.dataset.compId = comp.id;
-            statusSelect.className = 'status-select form-element'; // Keep existing class for event listeners
-            statusSelect.innerHTML = `
-                <option value="Not Started" ${currentStatus === 'Not Assessed' ? 'selected' : ''}>Not Assessed</option>
-                <option value="R" ${currentStatus === 'R' ? 'selected' : ''}>🔴 No Knowledge</option>
-                <option value="A" ${currentStatus === 'A' ? 'selected' : ''}>🟠 Learning</option>
-                <option value="G" ${currentStatus === 'G' ? 'selected' : ''}>🟢 Experienced</option>
-            `;
-            statusCell.appendChild(statusSelect);
-
-            // 4. Evidence Cell
-            const evidenceCell = row.insertCell();
-            evidenceCell.className = 'competency-evidence-cell';
-            const currentEvidenceText = compProgress.evidenceText || '';
-            const currentEvidenceLink = compProgress.evidenceLink || '';
-
-            const evidenceTextArea = document.createElement('textarea');
-            evidenceTextArea.id = `evidence-text-${comp.id}`;
-            evidenceTextArea.dataset.compId = comp.id;
-            evidenceTextArea.className = 'evidence-textarea form-element';
-            evidenceTextArea.placeholder = "Notes / Summary";
-            evidenceTextArea.value = currentEvidenceText;
-            evidenceTextArea.rows = 2; // Keep it small initially
-
-            const evidenceLinkInput = document.createElement('input');
-            evidenceLinkInput.type = 'url';
-            evidenceLinkInput.id = `evidence-link-${comp.id}`;
-            evidenceLinkInput.dataset.compId = comp.id;
-            evidenceLinkInput.className = 'evidence-link-input form-element';
-            evidenceLinkInput.placeholder = "Link your evidence (e.g. Google Drive)";
-            evidenceLinkInput.value = currentEvidenceLink;
-
-            evidenceCell.appendChild(evidenceTextArea);
-            evidenceCell.appendChild(document.createElement('br')); // Simple separator for now
-            evidenceCell.appendChild(evidenceLinkInput);
-
-            // 5. "How do I?" Button Cell
-            const actionCell = row.insertCell();
-            actionCell.className = 'competency-action-cell';
-            const guidanceButton = document.createElement('button');
-            guidanceButton.className = 'guidance-button'; // Keep existing class
-            guidanceButton.dataset.compId = comp.id;
-            guidanceButton.textContent = 'How do I?';
-            actionCell.appendChild(guidanceButton);
-        });
-
-        competenciesContainer.appendChild(table);
     });
 
     attachCompetencyEventListeners(); // This should still work as class names are preserved
