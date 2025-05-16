@@ -51,7 +51,7 @@
           "name": "Example One",
           "description": "<strong>Description Title</strong> <br>Description text.",
           "howTo" : [
-            "Point 1"
+            "Point 1",
             "Point 2"
           ]
         },
