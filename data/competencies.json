@@ -17,30 +17,6 @@
       ]
     },
     {
-      "name": "Business Analyst",
-      "idPrefix": "mid",
-      "competencies": [
-        {
-          "id": "mid_stakeholder_management",
-          "name": "Stakeholder Management",
-          "description": "Effectively identify, analyze, and manage stakeholder expectations.",
-          "howTo": [
-            "Develop a stakeholder map.",
-            "Practice communication strategies for different stakeholder types."
-          ]
-        },
-        {
-          "id": "mid_process_modeling",
-          "name": "Process Modeling",
-          "description": "Ability to model complex business processes using standard notations.",
-          "howTo": [
-            "Master BPMN or other relevant notations.",
-            "Use process modeling tools effectively."
-          ]
-        }
-      ]
-    },
-    {
       "name": "Senior Business Analyst",
       "idPrefix": "senior",
       "competencies": [
