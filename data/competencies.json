@@ -1,7 +1,7 @@
 {
   "levels": [
     {
-      "name": "Graduate Business Analyst",
+      "name": "Graduate",
       "idPrefix": "grad",
       "competencies": [
         {
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "name": "Business Analyst",
+      "name": "Mid",
       "idPrefix": "mid",
       "competencies": [
         {
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "name": "Senior Business Analyst",
+      "name": "Senior",
       "idPrefix": "senior",
       "competencies": [
         {
@@ -49,7 +49,7 @@
       ]
     },
         {
-      "name": "Lead Business Analyst",
+      "name": "Lead",
       "idPrefix": "lead",
       "competencies": [
         {
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "name": "Principal Business Analyst",
+      "name": "Principal",
       "idPrefix": "principal",
       "competencies": [
         {
