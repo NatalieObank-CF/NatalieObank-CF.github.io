@@ -438,3 +438,16 @@ function exportCompetenciesToCSV() {
         alert("CSV export is not supported in this browser.");
     }
 }
+
+// The event listener attachment in DOMContentLoaded remains the same,
+// as the button ID ('export-csv-button') is unchanged.
+// Make sure this part is still in your DOMContentLoaded listener:
+//
+// const exportCsvButton = document.getElementById('export-csv-button');
+// if (exportCsvButton) {
+//     exportCsvButton.addEventListener('click', exportCompetenciesToCSV);
+// }
+
+    // --- INITIALIZE ---
+    loadData();
+});
