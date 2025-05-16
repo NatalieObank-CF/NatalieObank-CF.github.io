@@ -109,12 +109,12 @@
         {
           "id": "lead_reqs_backlog_traceability",
           "name": "Requirements, Backlog & Traceability",
-          "description": "<strong>Requirements Elicitation</strong> <br>You are learning foundational requirements eliciation techniques (interviews, workshops) and different types of requirements. You are starting to understand user-centered design and it's influence on requirements. <br><br><strong>Backlog Management</strong> <br>You assist with backlog management and prioritisation, are learning agile document practices with supervision and developing awareness of requirement or scope changes and their project impact. <br><br><strong>Traceability</strong> <br>You are demonstrating your understanding of traceability and potential project risks.",
-          "howTo": [
-            "Learn about interview techniques.",
-            "Practice active listening.",
-            "Understand how to document findings."
-          ]
+          "description": "<strong>Requirements Elicitation</strong> <br>You lead teams in complex elicitation, refinement, and prioritisation using advanced techniques. You expertly facilitate workshops, resolving conflicts and driving consensus. You define requirements standards and empower your team to clearly articulate functional and non-functional requirements. <br><br><strong>Backlog Management</strong> <br>You strategically prioritise backlogs to align with business goals, coordinate across multiple workstreams, mitigate dependencies, and establish clear, transparent, and traceable backlog processes. <br><br><strong>Traceability</strong> <br>You define traceability frameworks that span multiple workstreams for comprehensive impact analysis, and lead risk assessments leveraging traceability. You mentor teams in best practices for maintaining traceability and proactive risk mitigation."
+        },
+        {
+          "id": "lead_analysis_options",
+          "name": "Analysis, Options & Feasibility",
+          "description": "<strong>Analysis</strong><br><br>You champion data driven decision-making by using your advanced expertise in qual and quant analytical methods. You uncover actionable insights, provide analysis for strategic decisions to drive value, and lead complex data analysis and migration activities.<br><br><strong>Impact Assessment</strong><br>You lead strategic impact analyses on business goals and communicate impacts to build consensus. You understand and guide team dynamics and resource changes to optimise team function and ensure project stability.<br><br><strong>Options and Feasibility</strong><br>You lead complex feasibility studies and solution evaluations, considering all relevant factors, to provide data-driven recommendations aligned with strategic vision and target architecture principles. You confidently present proposed changes, outcomes and strategic value to stakeholders."
         }
       ]
     },
