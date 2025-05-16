@@ -46,10 +46,11 @@
             "Understand how to document findings."
           ]
         },
-        {"id": "senior_analysis_feasibility",
+        {
+          "id": "senior_analysis_feasibility",
          "name": "Analysis, Options & Feasibility",
           "description": "<strong>Analysis</strong><br>You use advanced qual and quant analytical methods (data analysis, statistical modelling, user research, thematic analysis) to provide insightful, data-driven recommendations, and contribute innovative solutions.",
-    },
+        },
         {
       "name": "Lead",
       "idPrefix": "lead",
