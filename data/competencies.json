@@ -47,9 +47,9 @@
             ]
           },
         {
-          "id": "example-one",
-          "name": "Example One",
-          "description": "<strong>Description Title</strong> <br>Description text.",
+          "id": "senior_analysis_options_feasibility",
+          "name": "Analysis, Options & Feasibility",
+          "description": "<strong>Analysis</strong> <br>You use advanced qual and quant analytical methods (data analysis, statistical modelling, user research, thematic analysis) to provide insightful, data-driven recommendations and contribute innovative solutions.",
           "howTo" : [
             "Point 1",
             "Point 2"
