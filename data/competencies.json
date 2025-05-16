@@ -39,7 +39,7 @@
         {
           "id": "senior_reqs_backlog_traceability",
           "name": "Requirements, Backlog & Traceability",
-          "description": "<strong>Requirements Elicitation</strong> <br>You are learning foundational requirements eliciation techniques (interviews, workshops) and different types of requirements. You are starting to understand user-centered design and it's influence on requirements. <br><br><strong>Backlog Management</strong> <br>You assist with backlog management and prioritisation, are learning agile document practices with supervision and developing awareness of requirement or scope changes and their project impact. <br><br><strong>Traceability</strong> <br>You are demonstrating your understanding of traceability and potential project risks.",
+          "description": "<strong>Requirements Elicitation</strong> <br>You are learning foundational requirements eliciation techniques (interviews, workshops) and different types of requirements. You are starting to understand user-centered design and it's influence on requirements. <br><br><strong>Backlog Management</strong> <br>You assist with backlog management and prioritisation, are learning agile document practices with supervision and developing awareness of requirement or scope changes and their project impact. <br><br><strong>Traceability</strong> <br>You are demonstrating your understanding of traceability and potential project risks."
           "howTo": [
             "Learn about interview techniques.",
             "Practice active listening.",
@@ -48,7 +48,7 @@
           }
         ]
       },
-        {
+      {
       "name": "Lead",
       "idPrefix": "lead",
       "competencies": [
@@ -101,5 +101,7 @@
           "name":"Learning from Others",
           "description":"You expand your knowledge through community participation and sharing insights by leading workshops and presentations. <br><br>You actively learn from and collaborate with other capabilities to align requirements with business goals.<br><br>You champion a learning culture by empowering others to share ideas, creating opportunities for peer learning, and sharing your expertise and insights to elevate the team's capabilities. "
         }
+      ]
+    }
   ]
 }
