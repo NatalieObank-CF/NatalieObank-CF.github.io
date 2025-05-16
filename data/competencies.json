@@ -23,12 +23,7 @@
         {
           "id": "mid_reqs_backlog_traceability",
           "name": "Requirements, Backlog & Traceability",
-          "description": "<strong>Requirements Elicitation</strong> <br>You are learning foundational requirements eliciation techniques (interviews, workshops) and different types of requirements. You are starting to understand user-centered design and it's influence on requirements. <br><br><strong>Backlog Management</strong> <br>You assist with backlog management and prioritisation, are learning agile document practices with supervision and developing awareness of requirement or scope changes and their project impact. <br><br><strong>Traceability</strong> <br>You are demonstrating your understanding of traceability and potential project risks.",
-          "howTo": [
-            "Learn about interview techniques.",
-            "Practice active listening.",
-            "Understand how to document findings."
-          ]
+          "description": "<strong>Requirements Elicitation</strong> <br>You proficiently elicit and articulate functional and non-functional requirements using various techniques and user-centered design principles. You collaborate effectively with stakeholders to capture their system, process, and organisational needs to inform requirements and solution design, allowing you to drive change. <br><br><strong>Backlog Management</strong> <br>You effectively manage and prioritise the product backlog, collaborating with the team to refine requirements and ensure visibility of information, understanding the impact of technical design, applying agile documentation practices (INVEST, Gherkin), and proactively communicating or challenging changes to requirements or scope. <br><br><strong>Traceability</strong> <br>You ensure requirement quality through reviews and maintain appropriate traceability to determine source, impact, benefit, and changes. You highlight risks associated with specific requirements and identify mitigations."
         }
       ]
     },
