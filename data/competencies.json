@@ -54,9 +54,14 @@
             "Point 1",
             "Point 2"
           ]
-        }
-      ]
-    },
+        },
+      {
+        "id": "technical_acumen",
+        "name": "Technical Acumen",
+        "description": "<strong>Technical Concepts</strong><br>You bridge technical and business stakeholders by clearly communicating complex technical concepts using appropriate, tailored language and tools (e.g. diagrams, flowcharts, architectural diagrams, API specs) to ensure understanding and alignment with business goals. <br><br><strong>Clear Documentation</strong><br>You define and implement documentation strategies to meet diverse stakeholder needs, consistently providing high-quality, comprehensive documentation *requirements, user stories, process flows, system specs) from multiple sources, and effectively documenting interfaces and integrations to support development and testing."
+      }
+    ]
+  },
       {
       "name": "Lead",
       "idPrefix": "lead",
