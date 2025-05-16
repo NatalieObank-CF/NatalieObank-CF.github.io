@@ -1,83 +1,105 @@
 {
   "levels": [
     {
-      "name": "Graduate Business Analyst",
-      "idPrefix": "grad",
-      "competencies": [
+      "name": "Associate BA",
+      "groups": [  // Array of Top-Level Groups
         {
-          "id": "grad_reqs_backlog_traceability",
-          "name": "Requirements, Backlog & Traceability",
-          "description": "<strong>Requirements Elicitation</strong> <br>You are learning foundational requirements eliciation techniques (interviews, workshops) and different types of requirements. You are starting to understand user-centered design and it's influence on requirements. <br><br><strong>Backlog Management</strong> <br>You assist with backlog management and prioritisation, are learning agile document practices with supervision and developing awareness of requirement or scope changes and their project impact. <br><br><strong>Traceability</strong> <br>You are demonstrating your understanding of traceability and potential project risks.",
-          "howTo": [
-            "Learn about interview techniques.",
-            "Practice active listening.",
-            "Understand how to document findings."
+          "groupName": "Core Competencies",
+          "subGroups": [  // Array of Second-Level Groups
+            {
+              "subGroupName": "Interactions",
+              "competencies": [
+                {
+                  "id": "assoc_comm",
+                  "name": "Communication",
+                  "description": "Your description here...",
+                  "whatThisMeansContent": "Content for modal...",
+                  "howTo": [ "Step 1...", "Step 2..." ]
+                  // Optional: "learnMoreUrl": "..."
+                },
+                {
+                  "id": "assoc_listen",
+                  "name": "Listening",
+                  "description": "Your description here...",
+                  "whatThisMeansContent": "Content for modal...",
+                  "howTo": [ "Step 1...", "Step 2..." ]
+                }
+                // ... Add ALL other competencies belonging to "Interactions" under Associate BA
+              ]
+            },
+            {
+              "subGroupName": "Integrity",
+              "competencies": [
+                {
+                  "id": "assoc_accountability",
+                  "name": "Accountability",
+                  "description": "...",
+                  "whatThisMeansContent": "...",
+                  "howTo": []
+                }
+                // ... Add ALL other competencies belonging to "Integrity" under Associate BA
+              ]
+            },
+            {
+              "subGroupName": "Coaching & Mentoring",
+              "competencies": [
+                // ... Add competencies for Coaching & Mentoring under Associate BA
+              ]
+            },
+            {
+              "subGroupName": "Lead Your Team",
+              "competencies": [
+                // ... Add competencies for Lead Your Team under Associate BA
+              ]
+            },
+             {
+              "subGroupName": "Diversity, Equity, Inclusion & Belonging",
+              "competencies": [
+                // ... Add competencies for DEI&B under Associate BA
+              ]
+            },
+             {
+              "subGroupName": "Consultancy Mindset",
+              "competencies": [
+                // ... Add competencies for Consultancy Mindset under Associate BA
+              ]
+            }
+            // ... Add any other Second-Level Groups under "Core Competencies" for Associate BA
+          ]
+        },
+        {
+          "groupName": "Business Analysis Competencies",
+          "subGroups": [
+            {
+              "subGroupName": "Developing your Skills",
+              "competencies": [
+                // ... Add competencies for Developing your Skills under Associate BA
+              ]
+            },
+            {
+              "subGroupName": "Working Together",
+              "competencies": [
+                // ... Add competencies for Working Together under Associate BA
+              ]
+            }
+            // ... Add any other Second-Level Groups under "Business Analysis Competencies" for Associate BA
           ]
         }
+        // ... Add any other Top-Level Groups for Associate BA
       ]
     },
     {
-      "name": "Business Analyst",
-      "idPrefix": "mid",
-      "competencies": [
-        {
-          "id": "mid_stakeholder_management",
-          "name": "Stakeholder Management",
-          "description": "Effectively identify, analyze, and manage stakeholder expectations.",
-          "howTo": [
-            "Develop a stakeholder map.",
-            "Practice communication strategies for different stakeholder types."
-          ]
-        },
-        {
-          "id": "mid_process_modeling",
-          "name": "Process Modeling",
-          "description": "Ability to model complex business processes using standard notations.",
-          "howTo": [
-            "Master BPMN or other relevant notations.",
-            "Use process modeling tools effectively."
-          ]
-        }
+      "name": "Mid-Level BA",
+      "groups": [
+        // ... Structure Mid-Level BA competencies here using the same "groups" -> "subGroups" -> "competencies" structure
       ]
     },
     {
-      "name": "Senior Business Analyst",
-      "idPrefix": "senior",
-      "competencies": [
-        {
-          "id": "requirements_backlog_traceability",
-          "name": "Requirements, Backlog & Traceability",
-          "description": "<strong>Requirements Elicitation</strong><br>You are highly skilled in uncovering deeper stakeholder needs by eliciting and articulating functional and non-functional requirements using advanced techniques (e.g event storming and impact mapping), documenting processes, facilitating complex discussions across teams, and collaborating effectively with stakeholders, including UX designers to prioritise user needs. <br><br><strong>Backlog Management</strong><br>You drive product backlog management and prioritisation, aligning requirements with business goals, proactively communicating changes in requirements or scope to stakeholders.<br><br><strong>Traceability</strong><br>You proactively manage traceability and ensure accurate records from requirements to test cases. You identify and mitigate requirement risks and ensure proactive resolution. You champion best practices for audit-ready documentation and compliance throughout the project lifecycle.",
-          "whatThisMeansContent": "This means you look beyond simple requests! You skillfully identify the real needs of stakeholders using tried-and-true methods like Event Storming or Impact Mapping. You clearly explain different types of requirements, document processes well, and lead complex discussions with teams from different areas. You work closely with everyone involved, especially user experience (UX) experts, to make sure that the needs of users are prioritised and addressed for the best results.",
-          "howTo": [ 
-            "<strong>Collaboration & Elicitation:</strong> Research Event Storming, Impact Mapping and Design Thinking to uncover deeper needs, align teams and foster shared understanding.",
-            "<strong>Requirements & Analysis:</strong> Research User Story Mapping and Behaviour-Driven Development, to visualise journeys, ensure clarity and link to testing!",
-            "<strong>Strategic Insight:</strong> Research the Business Model Canvasm Value Stream Mapping to understand the 'big picture', and identify broader improvements.",
-            "<strong>Facilitation:</strong> Research Liberating Structures, advanced stakeholder communications to drive effective discussions and manage complex dynamics",
-            "You can also reach out to our Competency Champions for more guidance!"
-          ]
-        },
-        {
-            "id": "analysis_options_feasibility",
-            "name": "Analysis, Options & Feasibility",
-            "description": "<strong>Analysis</strong><br>You use advanced qual and quant analytical methods (data analysis, statisical modelling, user research, thematic analysis) to provide insightful, data-driven recommendations, and contribute innovative solutions. <br><br><strong>Impact Assessment</strong><br>You can conduct comprehensive impact analyses, considering various factors and perspectives, to assess the impact of changes on business goals, strategic objectives, users, teams, systems and data, and clearly communicate potential consequences to stakeholders faciliating informed decision-making.<br><br><strong>Options and Feasibility</strong><br>You conduct data-driven feasibility studies, evaluating solutions for business viability, technical feasibility and user desirability, providing clear recommendations with trade-offs, and collaborating to ensure alignment with strategic business goals."
-        },
-        {
-            "id": "technical_acumen",
-            "name": "Technical Acumen",
-            "description": "<strong>Technical Concepts</strong><br>You bridge technical and business stakeholders by clearly communicating complex technical concepts using appropriate, tailored language and tools (e.g., diagrams, flowcharts, architectural diagrams, API specs) to ensure understanding and alignment with business goals.<br><br><strong>Clear Documentation</strong><br>You define and implement documentation strategies to meet diverse stakeholder needs, consistently providing high-quality, comprehensive documentation (requirements, user stories, process flows, system specs) from multiple sources, and effectively documenting interfaces and integrations to support development and testing."
-        },
-        {
-            "id": "self_learning",
-            "name": "Self Learning",
-            "description": "You proactively identify and improve skills, demonstrating thought leadership and exploring advanced BA topics. <br><br>You regularly refine BA strategies and practice for long-term professional growth, staying up to date with industry developments and leading research initiatives.<br><br>You advocate for improved BA approaches using research and stay informed about competitor practices and industry trends."
-        },
-        {
-          "id":"learning_from_others",
-          "name":"Learning from Others",
-          "description":"You expand your knowledge through community participation and sharing insights by leading workshops and presentations. <br><br>You actively learn from and collaborate with other capabilities to align requirements with business goals.<br><br>You champion a learning culture by empowering others to share ideas, creating opportunities for peer learning, and sharing your expertise and insights to elevate the team's capabilities. "
-        }
+      "name": "Senior BA",
+      "groups": [
+        // ... Structure Senior BA competencies here using the same "groups" -> "subGroups" -> "competencies" structure
       ]
     }
+    // ... Add other levels (grades) here, structured similarly
   ]
 }
