@@ -69,6 +69,21 @@
         "id": "learning_from_others",
         "name": "Learning from Others",
         "description": "You expand your knowledge through community participation and sharing insights by leading workshops and presentations. <br><br>You actively learn from and collaborate with other capabilities to align requirements with business goals. <br><br>You champion a learning culture by empowering others to share ideas, creating opportunities for peer learning, and sharing your expertise and insights to elevate the team's capabilities."
+      },
+      {
+        "id": "teamwork",
+        "name": "Teamwork",
+        "description": "You work in groups (project and capability) to improve standards and awareness of best practices. <br><br>You actively contribute to communities of practice to foster collaboration and growth."
+      },
+      {
+        "id": "presenting_information",
+        "name": "Presenting Information (Multi-Modal)",
+        "description": "You regularly present complex information clearly to both technical and non-technical audiences and can tailor presentations and approach to different stakeholders, driving clear, actionable outcomes. You are able to read the room and pivot where required."
+      },
+      {
+        "id": "knowledge_sharing",
+        "name": "Knowledge Sharing",
+        "description": "You present yourself as a knowledge leader, knowledge sharing and helping others understand how BA skills can influence business and project strategy. <br><br>You are establishing an external presence where the opportunity arises, e.g., by attending / speaking at industry events, networking, contributing to articles / webinars / podcasts."
       }
     ]
   },
