@@ -84,6 +84,21 @@
         "id": "knowledge_sharing",
         "name": "Knowledge Sharing",
         "description": "You present yourself as a knowledge leader, knowledge sharing and helping others understand how BA skills can influence business and project strategy. <br><br>You are establishing an external presence where the opportunity arises, e.g., by attending / speaking at industry events, networking, contributing to articles / webinars / podcasts."
+      },
+      {
+        "id": "planning",
+        "name": "Planning",
+        "description": "You consistently contribute to detailed planning for client projects, ensuring timeframes and resources are effective. <br><br>You tailor your approach to planning for each project, proactively anticipating risks and presenting alternative approaches to stakeholders. You track and mitigate risks with your team with ease."
+      },
+      {
+        "id": "delivery",
+        "name": "Delivery",
+        "description": "You proactively lead and oversee implementation activities, ensuring successful delivery by anticipating challenges across build, test, and change management. <br><br>You are able to develop and execute migration strategies, taking into consideration the wider implications on business processes or structures. <br><br>You contribute to user acceptance testing (UAT) and performance testing. <br><br>You proactively engage stakeholders, lead change management strategies, and prioritise bug resolution based on data."
+      },
+      {
+        "id": "opportunities",
+        "name": "Opportunities",
+        "description": "You understand your client's wider ecosystem, and are able to assess areas of potential improvement, using your relationships to build buy-in to proposed solutions.<br><br>You are able to recognise trends and emerging client needs, positioning the team to provide innovative solutions that meet future demands. <br><br>You understand how our internal opportunity management processes work, and who to collaborate with internally to support live client opportunities.<br><br>If the opportunity is presented, you are comfortable assisting in the creation of proposals for potential new work."
       }
     ]
   },
