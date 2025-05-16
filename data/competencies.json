@@ -109,7 +109,52 @@
         {
           "id": "lead_analysis_options",
           "name": "Analysis, Options & Feasibility",
-          "description": "<strong>Analysis</strong><br><br>You champion data driven decision-making by using your advanced expertise in qual and quant analytical methods. You uncover actionable insights, provide analysis for strategic decisions to drive value, and lead complex data analysis and migration activities.<br><br><strong>Impact Assessment</strong><br>You lead strategic impact analyses on business goals and communicate impacts to build consensus. You understand and guide team dynamics and resource changes to optimise team function and ensure project stability.<br><br><strong>Options and Feasibility</strong><br>You lead complex feasibility studies and solution evaluations, considering all relevant factors, to provide data-driven recommendations aligned with strategic vision and target architecture principles. You confidently present proposed changes, outcomes and strategic value to stakeholders."
+          "description": "<strong>Analysis</strong><br>You champion data driven decision-making by using your advanced expertise in qual and quant analytical methods. You uncover actionable insights, provide analysis for strategic decisions to drive value, and lead complex data analysis and migration activities.<br><br><strong>Impact Assessment</strong><br>You lead strategic impact analyses on business goals and communicate impacts to build consensus. You understand and guide team dynamics and resource changes to optimise team function and ensure project stability.<br><br><strong>Options and Feasibility</strong><br>You lead complex feasibility studies and solution evaluations, considering all relevant factors, to provide data-driven recommendations aligned with strategic vision and target architecture principles. You confidently present proposed changes, outcomes and strategic value to stakeholders."
+        },
+        {
+          "id": "lead_technical_acumen",
+          "name": "Technical Acumen",
+          "description": "<strong>Technical Concepts</strong><br>As a technical leader, you strategically bridge the gap and drive alignment between complex technical landscapes, roadmaps and business objectives, translating intricate concepts into clear, actionable strategies for diverse audiences. You proactively analyse technical solutions, evaluate emerging technologies, and establish best practices for technical communication.<br><br><strong>Clear Documentation</strong><br>You champion a culture of excellent documentation, synthesising complex information into clear, comprehensive documents for diverse audiences. You maintain and improve templates and standards, expertly document complex interfaces and integrations, research new methods and tools, and conduct reviews and audits to ensure adherence to standards."
+        },
+        {
+          "id": "lead_self_learning",
+          "name": "Self Learning",
+          "description": "You continuously expand your leadership and BA expertise, balancing strategic business understanding and deep analysis knowledge.<br><br>You have deep expertise in BA while continuously building skills across adjacent capabilities.<br><br>You stay ahead of trends, use strategic decision-making to improve team efficiency and business outcomes, lead research into future BA approaches, and review industry benchmarks to keep the team at the forefront."
+        },
+        {
+          "id": "lead_learning_from_others",
+          "name": "Learning From Others",
+          "description": "You take a leading role in initatives aimed at improving BA practices and help team members with their own growth and development.<br><br>You collaborate with other capabilities to understand broader strategic decisions and influence them with BA input.<br><br>You coach and nurture technical and leadership capabilities in others, shaping a culture of continuous learning and peer mentorship."
+        },
+        {
+          "id": "lead_teamwork",
+          "name": "Teamwork",
+          "description": "You work directly with teams to improve standards and awareness of best practices.<br><br>You actively contribute to communities of practice, leading initatives to foster collaboration and shared growth across departments and disciplines."
+        },
+        {
+          "id": "lead_presenting_info",
+          "name": "Presenting Information (Multi-Modal)",
+          "description": "You frequently present at key meetings, leading discussions and shaping strategies using your knowledge. You share complex ideas in a manner that influences key stakeholders and drives decisions."
+        },
+        {
+          "id": "lead_knowledge_sharing",
+          "name": "Knowledge Sharing",
+          "description": "You are seen both internally and externally as an expert in your field. You play a key role in strengthening the BA community, fostering collaboration and encouraging shared success within the organisation.<br><br>You demonstrate the impact of BA deliverables (e.g., process improvements, requirements documentation) not only within the business but also in enhancing client/stakeholder understanding and satisfaction.<br><br>You build relationships with external organisations (e.g., industry associations, vendors) and contribute to the external business analysis community through presentations, publications, or participation in industry events."
+        },
+        {
+          "id": "lead_planning",
+          "name": "Planning",
+          "description": "You are responsible for shaping project priorities, highlighting dependencies, and offering reliable estimates for major client initatives.<br><br>You define and champion tailored BA approaches for complex projects, whilst also, empowering BAs to define and implement effective approaches.<br><br>You manage project scope, mitigating risks and providing estimates for Statements of Work (SOW). You are comfortable establishing a risk management approach, ensuring proactive mitigation of roadblocks."
+        },
+        {
+          "id": "lead_delivery",
+          "name": "Delivery",
+          "description": "You drive delivery excellence by orchestrating complex build and test activities across multiple workstreams, establishing and enforcing rigorous standards to ensure seamless and high-quality outcomes.<br><br>You define and communicate best practices for development, implementation, and testing processes across teams, introducing innovation to optimise build and test efficiency for our clients. <br><br>You strategically analyse and communicate the impact of change, implement standardised change management processes, and develop comprehensive change request strategies to minimise disruption and maximise adoption.<br><br>You establish and utilise feedback loops and reporting mechanisms to drive continuous improvement in delivery processes and outcomes."
+        },
+        {
+          "id": "lead_opportunities",
+          "name": "Opportunities",
+          "description": "You lead conversations when assessing your client’s ecosystem, identifying areas of improvement and proposing solutions to the client with a view to adding client value and increasing CreateFutures revenue opportunities.<br><br>You understand client opportunity management processes, including budget holders, signoff points and potential competitors."
         }
       ]
     },
