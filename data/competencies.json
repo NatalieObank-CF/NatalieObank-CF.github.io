@@ -37,6 +37,38 @@
       "idPrefix": "senior",
       "competencies": [
         {
+          "id": "senior_reqs_backlog_traceability",
+          "name": "Requirements, Backlog & Traceability",
+          "description": "<strong>Requirements Elicitation</strong> <br>You are learning foundational requirements eliciation techniques (interviews, workshops) and different types of requirements. You are starting to understand user-centered design and it's influence on requirements. <br><br><strong>Backlog Management</strong> <br>You assist with backlog management and prioritisation, are learning agile document practices with supervision and developing awareness of requirement or scope changes and their project impact. <br><br><strong>Traceability</strong> <br>You are demonstrating your understanding of traceability and potential project risks.",
+          "howTo": [
+            "Learn about interview techniques.",
+            "Practice active listening.",
+            "Understand how to document findings."
+          ]
+        }
+      ]
+    },
+        {
+      "name": "Lead Business Analyst",
+      "idPrefix": "lead",
+      "competencies": [
+        {
+          "id": "lead_reqs_backlog_traceability",
+          "name": "Requirements, Backlog & Traceability",
+          "description": "<strong>Requirements Elicitation</strong> <br>You are learning foundational requirements eliciation techniques (interviews, workshops) and different types of requirements. You are starting to understand user-centered design and it's influence on requirements. <br><br><strong>Backlog Management</strong> <br>You assist with backlog management and prioritisation, are learning agile document practices with supervision and developing awareness of requirement or scope changes and their project impact. <br><br><strong>Traceability</strong> <br>You are demonstrating your understanding of traceability and potential project risks.",
+          "howTo": [
+            "Learn about interview techniques.",
+            "Practice active listening.",
+            "Understand how to document findings."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Principal Business Analyst",
+      "idPrefix": "principal",
+      "competencies": [
+        {
           "id": "requirements_backlog_traceability",
           "name": "Requirements, Backlog & Traceability",
           "description": "<strong>Requirements Elicitation</strong><br>You are highly skilled in uncovering deeper stakeholder needs by eliciting and articulating functional and non-functional requirements using advanced techniques (e.g event storming and impact mapping), documenting processes, facilitating complex discussions across teams, and collaborating effectively with stakeholders, including UX designers to prioritise user needs. <br><br><strong>Backlog Management</strong><br>You drive product backlog management and prioritisation, aligning requirements with business goals, proactively communicating changes in requirements or scope to stakeholders.<br><br><strong>Traceability</strong><br>You proactively manage traceability and ensure accurate records from requirements to test cases. You identify and mitigate requirement risks and ensure proactive resolution. You champion best practices for audit-ready documentation and compliance throughout the project lifecycle.",
